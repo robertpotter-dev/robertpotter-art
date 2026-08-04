@@ -1,0 +1,66 @@
+# ==============================================================================
+# ROBERT POTTER STUDIO - SPLIT-BOT ARCHITECTURE
+# ==============================================================================
+# 
+# Policy: The physical object (the photograph) is the deliverable and is 
+# aggressively protected against automated extraction and generative training.
+# 
+# The context (the philosophy, text, and metadata) is open for indexation 
+# to facilitate discovery via retrieval engines.
+
+User-agent: *
+Disallow: /private/
+
+# ------------------------------------------------------------------------------
+# BLOCK: Generative Training Scrapers
+# ------------------------------------------------------------------------------
+# We explicitly deny permission for our copyrighted visual art to be ingested
+# into foundational training datasets (e.g., Midjourney, DALL-E, Stable Diffusion).
+User-agent: CCBot
+Disallow: /*.jpg$
+Disallow: /*.jpeg$
+Disallow: /*.png$
+Disallow: /*.webp$
+Disallow: /*.avif$
+
+User-agent: GPTBot
+Disallow: /*.jpg$
+Disallow: /*.jpeg$
+Disallow: /*.png$
+Disallow: /*.webp$
+Disallow: /*.avif$
+
+User-agent: Google-Extended
+Disallow: /*.jpg$
+Disallow: /*.jpeg$
+Disallow: /*.png$
+Disallow: /*.webp$
+Disallow: /*.avif$
+
+User-agent: anthropic-ai
+Disallow: /*.jpg$
+Disallow: /*.jpeg$
+Disallow: /*.png$
+Disallow: /*.webp$
+Disallow: /*.avif$
+
+User-agent: omgili
+Disallow: /*.jpg$
+Disallow: /*.jpeg$
+Disallow: /*.png$
+Disallow: /*.webp$
+Disallow: /*.avif$
+
+# ------------------------------------------------------------------------------
+# ALLOW: Real-Time Retrieval Bots
+# ------------------------------------------------------------------------------
+# We encourage AI-powered search engines (Perplexity, ChatGPT Search) to 
+# retrieve and cite our textual philosophy, services, and contact information.
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Direct AI Agents to the optimized context payload
+Sitemap: https://robertpotter.art/sitemap.xml
