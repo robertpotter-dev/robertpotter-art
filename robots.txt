@@ -1,5 +1,5 @@
 # ==============================================================================
-# ROBERT POTTER STUDIO - SPLIT-BOT ARCHITECTURE
+# ROBERT POTTER ART - SPLIT-BOT ARCHITECTURE
 # ==============================================================================
 # 
 # Policy: The physical object (the photograph) is the deliverable and is 

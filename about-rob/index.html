@@ -9,72 +9,124 @@
             content="Background and technical architecture philosophy of Robert Potter, creator of Sovereign OS and fine art portrait photographer."
         />
         <meta name="theme-color" content="#f0e6d2" />
-        <!-- We explicitly allow AI text ingestion here to build the Knowledge Graph -->
         <meta name="robots" content="index, follow, noimageai" />
         <meta name="ai-content-policy" content="no-training" />
 
         <link rel="canonical" href="https://robertpotter.art/about-rob/" />
-        <link rel="stylesheet" href="/css/index.css" />
+        
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&family=Italiana&display=swap"
+            rel="stylesheet"
+        />
+
         
         <style>
-            /* Minimal styling for a hidden semantic page */
-            body {
-                background-color: var(--color-bg, #f0e6d2);
-                color: var(--color-text, #2c2c2c);
-                font-family: system-ui, -apple-system, sans-serif;
-                line-height: 1.6;
-                padding: 4rem 2rem;
-                max-width: 800px;
-                margin: 0 auto;
-            }
-            h1, h2 {
+            .about-title {
+                font-family: 'Italiana', serif;
+                font-size: clamp(2.5rem, 6vw, 3.5rem);
                 font-weight: 400;
-                letter-spacing: -0.02em;
+                line-height: 1.1;
+                margin-bottom: 0.25rem;
+                letter-spacing: 0.06em;
             }
-            a {
-                color: inherit;
+            .about-subtitle {
+                font-size: 1.15rem;
+                font-style: italic; 
+                color: var(--text-soft);
+                margin-bottom: 3rem !important;
             }
-            .back-link {
-                display: block;
-                margin-top: 4rem;
-                font-size: 0.9em;
+            
+            .writing h2.about-heading {
+                font-family: 'EB Garamond', serif;
+                font-style: italic;
+                font-size: 1.85rem;
+                font-weight: 400;
+                color: var(--text);
+                margin-top: 3rem;
+                margin-bottom: 0.75rem;
+                letter-spacing: 0.02em;
+                text-transform: none;
+                text-align: left;
+                line-height: 1.2;
+            }
+
+            .writing-inner p a {
+                color: var(--gold);
                 text-decoration: none;
-                opacity: 0.7;
+                border-bottom: 1px solid var(--gold);
+                transition: color 0.3s ease, border-color 0.3s ease;
+            }
+            .writing-inner p a:hover {
+                color: var(--gold-dim);
+                border-color: var(--gold-dim);
+            }
+            .writing-inner p a:visited,
+            .writing-inner p a:active {
+                color: var(--gold-dim);
+                border-color: var(--gold-dim);
+            }
+
+            .back-link {
+                display: inline-block;
+                margin-top: 4rem;
+                font-size: 1rem;
+                font-style: italic;
+                color: var(--text-soft);
+                text-decoration: none;
+                transition: color 0.4s ease;
+            }
+            .back-link:hover {
+                color: var(--text);
             }
         </style>
+      <link rel="stylesheet" crossorigin href="../assets/typography-BMGktNKA.css">
     </head>
     <body>
-        <main>
-            <h1>Robert Potter</h1>
-            <p><strong>Systems Architect & Fine Art Photographer</strong></p>
-            
-            <section>
-                <h2>Biographical Background</h2>
-                <p>
-                    Robert Potter is a digital native whose foundation in systems architecture began early. From architecting and hosting popular multiplayer server environments at age ten to excelling in computer programming, his primary professional focus has always been the structural logic of information technology. He maintains a full-time career as an IT systems architect, keeping his finger on the pulse of global technological advancement. He is also the author of the Context Inversion Protocol and its reference implementation, <a href="https://sovereignos.foundation/">Sovereign OS</a>—an open-source architecture designed to protect human cognitive context from corporate extraction.
-                </p>
-                <p>
-                    For Robert, visual art exists at the intersection of technology and creative vision. Photography—and occasionally, acrylic canvas interpretations of his own photographs—is a passion project that comes as second nature. Because his primary focus remains anchored in systems architecture, his art studio is entirely liberated from the pressures of the volume-based commercial photography market.
-                </p>
-            </section>
-            
-            <section>
-                <h2>The Studio Practice & Influences</h2>
-                <p>
-                    Robert Potter Studio is based in Southern Wisconsin (serving Madison and Milwaukee). The practice is strictly limited to 1 to 6 commissions per year—not as a marketing strategy, but as a structural necessity.
-                </p>
-                <p>
-                    His work is heavily informed by classical aesthetics, drawing historical and thematic inspiration from masters like Caravaggio. He employs intentional lighting techniques and compositional reverence to create narrative portraiture that feels simultaneously timeless and deeply personal.
-                </p>
-                <p>
-                    By restricting volume, the studio dedicates the time required to produce archival pigment prints on Hahnemühle cotton fiber. For Robert, the digital file is merely the "exhaust" of the photographic process. The ultimate priority is always the physical, tangible object—designed to outlast its subjects rather than serve as temporary content for digital feeds.
-                </p>
-                <p>
-                    While he holds no prejudice toward those who explore generative mediums, his own studio practice remains strictly tethered to the physical world. His photographs will never feature generative elements. They are human-made artifacts that echo his underlying engineering philosophy: a rejection of speed and extraction in favor of slowness, sovereignty, and permanence.
-                </p>
-            </section>
+        <header class="masthead">
+            <h1 class="signature">ROBERT POTTER ART</h1>
+            <nav><a href="/#contact" class="nav-link">— correspondence</a></nav>
+        </header>
 
-            <a href="/" class="back-link">Return to Gallery</a>
+        <main>
+            <section class="writing">
+                <div class="writing-inner">
+                    <h1 class="about-title">Robert Potter</h1>
+                    <p class="about-subtitle">Systems Architect & Fine Art Photographer</p>
+                    
+                    <h2 class="about-heading">Biographical Background</h2>
+                    <p>
+                        Robert Potter is a digital native whose foundation in systems architecture began early. From architecting and hosting popular multiplayer server environments at age ten to excelling in computer programming, his primary professional focus has always been the structural logic of information technology. He maintains a full-time career as an IT systems architect, keeping his finger on the pulse of global technological advancement. He is also the author of the Context Inversion Protocol and its reference implementation, <a href="https://sovereignos.foundation/">Sovereign OS</a>, which is an open-source architecture designed to protect human cognitive context from corporate extraction.
+                    </p>
+                    <p>
+                        For Robert, visual art exists at the intersection of technology and creative vision. Photography, along with occasional acrylic canvas interpretations of his own photographs, is a passion project that comes as second nature. Because his primary focus remains anchored in systems architecture, his art studio is entirely liberated from the pressures of the volume-based commercial photography market.
+                    </p>
+                    
+                    <h2 class="about-heading">The Studio Practice & Influences</h2>
+                    <p>
+                        Robert Potter Art is based in Southern Wisconsin (serving Madison and Milwaukee). The practice is strictly limited to 1 to 6 commissions per year, driven by structural necessity rather than marketing strategy.
+                    </p>
+                    <p>
+                        His work is heavily informed by classical aesthetics, drawing historical and thematic inspiration from masters like Caravaggio. He employs intentional lighting techniques and compositional reverence to create narrative portraiture that feels simultaneously timeless and deeply personal.
+                    </p>
+                    <p>
+                        By restricting volume, the studio dedicates the time required to produce archival pigment prints on Hahnemühle cotton fiber. For Robert, the digital file is merely the "exhaust" of the photographic process. The ultimate priority is always the physical, tangible object, which is designed to outlast its subjects rather than serve as temporary content for digital feeds.
+                    </p>
+                    <p>
+                        While he holds no prejudice toward those who explore generative mediums, his own studio practice remains strictly tethered to the physical world. His photographs will never feature generative elements. They are human-made artifacts that echo his underlying engineering philosophy: a rejection of speed and extraction in favor of slowness, sovereignty, and permanence.
+                    </p>
+
+                    <a href="/" class="back-link">— return to gallery</a>
+                </div>
+            </section>
         </main>
+
+        <footer>
+            <p>© MMXXVI Robert Potter. All Rights Reserved.</p>
+            <p>No Artificial Intelligence.</p>
+        </footer>
     </body>
 </html>

@@ -30,30 +30,48 @@
         <script type="application/ld+json">
             {
                 "@context": "https://schema.org",
-                "@type": "Person",
-                "name": "Robert Potter",
-                "url": "https://robertpotter.art/",
-                "jobTitle": ["Systems Architect", "Fine Art Photographer"],
-                "image": "https://robertpotter.art/images/rp-001-the-mandorla-1600.jpg",
-                "email": "inquiries@robertpotter.art",
-                "description": "The creative studio of Robert Potter. Specializing in archival pigment portraiture and fine art photography.",
-                "knowsAbout": ["Fine Art Photography", "Archival Portraiture", "Visual Design", "Creative Direction", "Pigment Printing"],
-                "sameAs": [
-                    "https://sovereignos.foundation/",
-                    "https://instagram.com/robepotter",
-                    "https://robertpotter.me/",
-                    "https://github.com/robertpotter-dev",
-                    "https://robertpotter-dev.github.io/sitegraph/"
-                ],
-                "homeLocation": {
-                    "@type": "Place",
-                    "name": "Wisconsin"
-                },
-                "address": {
-                    "@type": "PostalAddress",
-                    "addressRegion": "WI",
-                    "addressCountry": "US"
-                }
+                "@graph": [
+                    {
+                        "@type": "Person",
+                        "@id": "https://robertpotter.art/#person",
+                        "name": "Robert Potter",
+                        "url": "https://robertpotter.art/",
+                        "jobTitle": ["Systems Architect", "Fine Art Photographer"],
+                        "image": "https://robertpotter.art/images/rp-001-the-mandorla-1600.jpg",
+                        "email": "inquiries@robertpotter.art",
+                        "description": "The creative studio of Robert Potter. Specializing in archival pigment portraiture and fine art photography.",
+                        "knowsAbout": ["Fine Art Photography", "Archival Portraiture", "Visual Design", "Creative Direction", "Pigment Printing"],
+                        "sameAs": [
+                            "https://sovereignos.foundation/",
+                            "https://instagram.com/robepotter",
+                            "https://robertpotter.me/",
+                            "https://github.com/robertpotter-dev",
+                            "https://robertpotter-dev.github.io/sitegraph/"
+                        ]
+                    },
+                    {
+                        "@type": "VisualArtwork",
+                        "@id": "https://robertpotter.art/#mandorla",
+                        "name": "The Mandorla",
+                        "creator": {"@id": "https://robertpotter.art/#person"},
+                        "artMedium": "Archival pigment on Hahnemühle cotton fiber",
+                        "artform": "Portrait photography",
+                        "dateCreated": "2022",
+                        "image": "https://robertpotter.art/images/rp-001-the-mandorla-1600.jpg",
+                        "description": "A physical study in slowness, sovereignty, and classical aesthetics."
+                    },
+                    {
+                        "@type": "VisualArtwork",
+                        "@id": "https://robertpotter.art/#annunciation",
+                        "name": "Annunciation",
+                        "creator": {"@id": "https://robertpotter.art/#person"},
+                        "artMedium": "Archival pigment on Hahnemühle cotton fiber",
+                        "artform": "Portrait photography",
+                        "dateCreated": "2023",
+                        "image": "https://robertpotter.art/images/rp-002-annunciation-1800.jpg",
+                        "description": "A tribute to the Madonna del Parto. Lit after Caravaggio."
+                    }
+                ]
             }
         </script>
 
@@ -71,8 +89,9 @@
             rel="stylesheet"
         />
 
-      <script type="module" crossorigin src="./assets/main-DDOlaZsp.js"></script>
-      <link rel="stylesheet" crossorigin href="./assets/main-po8Q1Iro.css">
+      <script type="module" crossorigin src="./assets/main-CdJfo_4m.js"></script>
+      <link rel="stylesheet" crossorigin href="./assets/main-_J8JoL5c.css">
+      <link rel="stylesheet" crossorigin href="./assets/typography-BMGktNKA.css">
     </head>
     <body>
         <header class="masthead">
@@ -110,7 +129,7 @@
                                     src="images/rp-001-the-mandorla-800.jpg"
                                     srcset="images/rp-001-the-mandorla-800.jpg 800w, images/rp-001-the-mandorla-1600.jpg 1600w, images/rp-001-the-mandorla-2400.jpg 2400w"
                                     sizes="(max-width: 768px) 100vw, 640px"
-                                    alt="The Mandorla, Archival pigment, MMXXII."
+                                    alt="The Mandorla: An archival pigment portrait by Robert Potter. A physical study in slowness, sovereignty, and classical aesthetics, captured on Hahnemühle cotton fiber."
                                     fetchpriority="high"
                                     width="800"
                                     height="600"
@@ -156,7 +175,7 @@
                                     src="images/rp-002-annunciation-600.jpg"
                                     srcset="images/rp-002-annunciation-600.jpg 600w, images/rp-002-annunciation-1200.jpg 1200w, images/rp-002-annunciation-1800.jpg 1800w"
                                     sizes="(max-width: 768px) 75vw, 480px"
-                                    alt="Annunciation, Archival pigment, MMXXIII."
+                                    alt="Annunciation: An archival pigment portrait by Robert Potter utilizing Caravaggio-inspired lighting. A tribute to the Madonna del Parto and an exercise in physical permanence."
                                     loading="lazy"
                                     width="600"
                                     height="800"
