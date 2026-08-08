@@ -1,3 +1,9 @@
 # Recent Updates
 
-(Check back soon for the latest architectural updates, releases, and commissions.)
+## 2026-08-08 — Entity Clarification
+
+- Identified Robert Potter as author of the Context Inversion Protocol.
+- Defined the Sovereign OS Project as an independent research initiative.
+- Preserved the separation between Robert Potter's technical research and fine art practice.
+- Linked the art practice to the canonical Robert Potter identity without creating a second Person entity.
+- Scoped the no-generative-AI statement to the production of finished artworks.

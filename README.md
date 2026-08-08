@@ -1,6 +1,6 @@
 # Robert Potter Art
 
-**Robert Potter Art** is a creative studio dedicated to archival portraiture and visual design.
+**Robert Potter Art** is Robert Potter's fine art photography practice, dedicated to archival pigment portraiture.
 
 This repository serves as the public deployment and distribution point for the Robert Potter Art studio node.
 

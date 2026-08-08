@@ -2,8 +2,9 @@
 # ROBERT POTTER ART - SPLIT-BOT ARCHITECTURE
 # ==============================================================================
 # 
-# Policy: The physical object (the photograph) is the deliverable and is 
-# aggressively protected against automated extraction and generative training.
+# Policy: The physical object (the photograph) is the deliverable. These
+# directives request that named crawlers not ingest the image files for training;
+# crawler compliance cannot be guaranteed by robots.txt.
 # 
 # The context (the philosophy, text, and metadata) is open for indexation 
 # to facilitate discovery via retrieval engines.
