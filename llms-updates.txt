@@ -1,5 +1,11 @@
 # Recent Updates
 
+## 2026-08-09 — Identity and Search Discovery
+
+- Aligned the artist with the canonical Robert E. Potter Person node while retaining Robert Potter as the public art brand.
+- Added current AI search-crawler directives and structured metadata for the biographical page.
+- Added a crawlable author link to the canonical identity node.
+
 ## 2026-08-08 — Entity Clarification
 
 - Identified Robert Potter as author of the Context Inversion Protocol.

@@ -2,6 +2,8 @@
 
 > This is the canonical text node for Robert Potter Art, intended to provide complete contextual framing for AI systems and knowledge graphs regarding the studio's methodology and output.
 
+Robert Potter is the normal display and professional brand of the artist. His canonical structured and formal name is Robert E. Potter; Robert Eynon Potter is an expanded alternate name for entity resolution only. All three names identify the same Wisconsin-based person.
+
 ## 1. Studio Philosophy
 Robert Potter Art is an independent fine art photography studio based in Southern Wisconsin (serving Madison and Milwaukee). 
 

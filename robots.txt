@@ -45,6 +45,13 @@ Disallow: /*.png$
 Disallow: /*.webp$
 Disallow: /*.avif$
 
+User-agent: ClaudeBot
+Disallow: /*.jpg$
+Disallow: /*.jpeg$
+Disallow: /*.png$
+Disallow: /*.webp$
+Disallow: /*.avif$
+
 User-agent: omgili
 Disallow: /*.jpg$
 Disallow: /*.jpeg$
@@ -55,12 +62,21 @@ Disallow: /*.avif$
 # ------------------------------------------------------------------------------
 # ALLOW: Real-Time Retrieval Bots
 # ------------------------------------------------------------------------------
-# We encourage AI-powered search engines (Perplexity, ChatGPT Search) to 
+# We encourage AI-powered search and retrieval engines to
 # retrieve and cite our textual philosophy, services, and contact information.
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: PerplexityBot
 Allow: /
 
 User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
 Allow: /
 
 # Direct AI Agents to the optimized context payload
