@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+        <title>Annunciation | Provenance & Physical Custody | Robert Potter Art</title>
+        <meta
+            name="description"
+            content="Official physical custody and provenance record for Annunciation (RP-002-1OF1) by Robert Potter."
+        />
+        <meta name="theme-color" content="#c8bca9" />
+        <meta name="robots" content="index, follow, noimageai" />
+
+        <link rel="canonical" href="https://robertpotter.art/provenance/RP-002-1OF1/" />
+        <link rel="icon" href="../../images/favicon.svg" />
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Italiana&display=swap"
+            rel="stylesheet"
+        />
+
+
+        <style>
+            html,
+            body {
+                min-height: 100%;
+            }
+
+            body {
+                background: var(--wall);
+                color: var(--text);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                min-height: 100vh;
+            }
+
+            .provenance-wrapper {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: clamp(3.5rem, 8vw, 6rem) clamp(1.5rem, 4vw, 3rem);
+                perspective: 1600px;
+            }
+
+            .provenance-inner {
+                max-width: 560px;
+                width: 100%;
+                text-align: center;
+                perspective: 1600px;
+            }
+
+            .studio-subhead {
+                font-family: 'Italiana', serif;
+                font-size: 0.9rem;
+                letter-spacing: 0.32em;
+                text-transform: uppercase;
+                color: var(--text-soft);
+                margin-bottom: 2rem;
+            }
+
+            .artwork-title {
+                font-family: 'Italiana', serif;
+                font-size: clamp(2.4rem, 6vw, 3.5rem);
+                font-weight: 400;
+                line-height: 1.1;
+                color: var(--frame);
+                letter-spacing: 0.04em;
+                margin-bottom: 0.5rem;
+            }
+
+            .edition-statement {
+                font-family: 'EB Garamond', serif;
+                font-style: italic;
+                font-size: 1.2rem;
+                color: var(--text-soft);
+                margin-bottom: 2.5rem;
+            }
+
+            .section-tag {
+                font-family: 'Italiana', serif;
+                font-size: 0.85rem;
+                letter-spacing: 0.28em;
+                text-transform: uppercase;
+                color: var(--gold-dim);
+                margin-bottom: 0.75rem;
+            }
+
+            .custody-history {
+                font-family: 'EB Garamond', serif;
+                font-size: 1.35rem;
+                color: var(--text);
+                line-height: 1.6;
+                margin-bottom: 0.25rem;
+            }
+
+            .custody-patron {
+                font-family: 'Italiana', serif;
+                font-size: 1.15rem;
+                letter-spacing: 0.08em;
+                color: var(--frame);
+                margin-bottom: 2.5rem;
+            }
+
+            .provenance-records {
+                margin: 2.5rem auto 1.5rem;
+                max-width: 440px;
+            }
+
+            .record-line {
+                font-family: 'EB Garamond', serif;
+                font-size: 1.1rem;
+                color: var(--text-soft);
+                line-height: 1.8;
+                margin: 0;
+            }
+
+            .record-line strong {
+                color: var(--text);
+                font-weight: 500;
+            }
+
+            .record-status {
+                font-family: 'EB Garamond', serif;
+                font-style: italic;
+                font-size: 1.05rem;
+                color: var(--gold-dim);
+                margin-top: 0.5rem;
+            }
+
+            /* ==========================================================================
+               Tactile Museum Plaque (Direct Thumb Manipulation & Border Glow)
+               ========================================================================== */
+
+            /* 1. Outer Glowing Border Shell */
+            .bearer-plaque-shell {
+                display: none;
+                position: relative;
+                margin: 3.5rem auto 1.5rem;
+                max-width: 520px;
+                width: 100%;
+                padding: 1.5px;
+                border-radius: 2px;
+                background: radial-gradient(
+                    circle 280px at var(--light-x, 50%) var(--light-y, 35%),
+                    #f5e096 0%,
+                    #dfb15b 28%,
+                    #b58538 52%,
+                    rgba(181, 133, 56, 0.45) 75%,
+                    rgba(20, 8, 3, 0.4) 100%
+                );
+                transform-style: preserve-3d;
+                will-change: transform;
+                box-shadow:
+                    var(--shadow-x, 0px) var(--shadow-y, 22px) 46px -12px rgba(20, 8, 3, 0.32),
+                    0 8px 20px -4px rgba(20, 8, 3, 0.15);
+                touch-action: none;
+                user-select: none;
+                -webkit-user-select: none;
+                cursor: grab;
+                animation: fadeIn 0.8s ease forwards;
+            }
+
+            .bearer-plaque-shell:active {
+                cursor: grabbing;
+            }
+
+            /* 2. Archival Plaque Body */
+            .bearer-plaque {
+                position: relative;
+                background: #faf8f3;
+                padding: clamp(2.2rem, 5vw, 3.2rem) clamp(1.5rem, 4vw, 2.5rem);
+                border-radius: 2px;
+                text-align: center;
+                overflow: hidden;
+                transform-style: preserve-3d;
+                pointer-events: none; /* Let the shell capture all touches seamlessly */
+            }
+
+            /* 3. Inset Gold Bevel Hairline */
+            .plaque-border-inset {
+                position: absolute;
+                inset: 7px;
+                border: 1px solid var(--gold);
+                box-shadow:
+                    inset 0 0 0 1px rgba(20, 8, 3, 0.15),
+                    0 0 0 1px rgba(20, 8, 3, 0.15);
+                pointer-events: none;
+                z-index: 2;
+                transform: translateZ(3px);
+            }
+
+            /* 4. Fine Art Holographic Foil Diffraction Layer */
+            .plaque-holo-foil {
+                position: absolute;
+                inset: 0;
+                background:
+                    /* Micro-ribbon security diffraction grating */
+                    repeating-linear-gradient(
+                        calc(var(--foil-angle, 135deg) + 45deg),
+                        rgba(218, 165, 32, 0.04) 0px,
+                        rgba(218, 165, 32, 0.04) 2px,
+                        transparent 2px,
+                        transparent 5px
+                    ),
+                    /* Spectral champagne gold / pearlescent iridescent wash */
+                    linear-gradient(
+                            var(--foil-angle, 135deg),
+                            transparent 12%,
+                            rgba(225, 185, 110, 0.22) 28%,
+                            rgba(255, 245, 215, 0.45) 46%,
+                            rgba(215, 180, 230, 0.2) 58%,
+                            rgba(180, 220, 240, 0.18) 68%,
+                            transparent 84%
+                        );
+                pointer-events: none;
+                mix-blend-mode: color-dodge;
+                opacity: 0.95;
+                z-index: 3;
+                transform: translateZ(6px);
+            }
+
+            /* 5. Specular Glare Highlight */
+            .plaque-glare {
+                position: absolute;
+                inset: 0;
+                background: radial-gradient(
+                    circle 280px at var(--light-x, 50%) var(--light-y, 35%),
+                    rgba(255, 255, 255, 0.65) 0%,
+                    rgba(255, 245, 220, 0.2) 38%,
+                    transparent 75%
+                );
+                pointer-events: none;
+                mix-blend-mode: overlay;
+                opacity: 0.85;
+                z-index: 4;
+                transform: translateZ(8px);
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+                .bearer-plaque-shell {
+                    transform: none !important;
+                    background: var(--gold);
+                }
+                .plaque-holo-foil {
+                    background: linear-gradient(
+                        135deg,
+                        transparent 20%,
+                        rgba(255, 245, 215, 0.2) 50%,
+                        transparent 80%
+                    );
+                }
+                .plaque-glare {
+                    display: none;
+                }
+            }
+
+            /* 6. Foreground Typography (Physical Relief) */
+            .plaque-content {
+                position: relative;
+                z-index: 5;
+                transform: translateZ(12px);
+                pointer-events: none;
+            }
+
+            .plaque-header {
+                font-family: 'Italiana', serif;
+                font-size: 0.8rem;
+                letter-spacing: 0.32em;
+                text-transform: uppercase;
+                color: var(--gold-dim);
+                margin-bottom: 0.6rem;
+            }
+
+            .plaque-title {
+                font-family: 'Italiana', serif;
+                font-size: 1.35rem;
+                letter-spacing: 0.08em;
+                color: var(--frame);
+                margin-bottom: 1.5rem;
+            }
+
+            .plaque-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                margin: 1.5rem 0;
+            }
+
+            .plaque-line {
+                font-family: 'EB Garamond', serif;
+                font-size: 1.05rem;
+                color: var(--text-soft);
+                line-height: 1.6;
+            }
+
+            .plaque-line strong {
+                color: var(--frame);
+                font-weight: 500;
+            }
+
+            .plaque-guarantee {
+                font-family: 'EB Garamond', serif;
+                font-style: italic;
+                font-size: 0.95rem;
+                color: var(--text-soft);
+                line-height: 1.6;
+                margin-top: 1.5rem;
+                padding-top: 1.25rem;
+                border-top: 0.75px solid rgba(181, 133, 56, 0.35);
+            }
+
+            .back-link {
+                display: inline-block;
+                margin-top: 3rem;
+                font-family: 'Italiana', serif;
+                font-size: 0.85rem;
+                letter-spacing: 0.25em;
+                text-transform: uppercase;
+                color: var(--text-soft);
+                text-decoration: none;
+                border-bottom: 1px solid var(--gold-dim);
+                padding-bottom: 0.2rem;
+                transition:
+                    color 0.3s ease,
+                    border-color 0.3s ease;
+            }
+
+            .back-link:hover {
+                color: var(--text);
+                border-color: var(--text);
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+        </style>
+      <script type="module" crossorigin src="../../assets/modulepreload-polyfill-B5Qt9EMX.js"></script>
+      <script type="module" crossorigin src="../../assets/provenance-DLwDjHpS.js"></script>
+      <link rel="stylesheet" crossorigin href="../../assets/typography-C1L7bN3h.css">
+    </head>
+    <body>
+        <main class="provenance-wrapper">
+            <div class="provenance-inner">
+                <p class="studio-subhead">— catalogue provenance</p>
+
+                <h1 class="artwork-title">Annunciation</h1>
+                <p class="edition-statement">MMXXIII • Unique Master Impression (1 of 1)</p>
+
+                <hr class="divider" />
+
+                <p class="section-tag">current custody</p>
+                <p class="custody-history">2023–present, Private Collection</p>
+                <p class="custody-patron">K.M.W. Residence</p>
+
+                <!-- Public Record (Zero Serial Numbers) -->
+                <div class="provenance-records">
+                    <p class="record-line">Catalogue Identifier: <strong>RP-002-1OF1</strong></p>
+                    <p class="record-status">Registered &amp; Master Sealed</p>
+                </div>
+
+                <!-- Unlocked Bearer Holographic Museum Plaque with Border Glow -->
+                <div
+                    id="bearer-vault"
+                    class="bearer-plaque-shell"
+                    data-iv="ab93f7e3dd7de43c040b9826"
+                    data-ciphertext="62c6d6a9a81a770a078424d26a54dfebf6a551e5357e1fade1cf181f7718f2a228be2407c4e72da93f2819c5996ac73daac02f8cfcc562c4f0c6485585a8b86cd0c24e41e61ef4a7ddb9a7f396321caffa950dff4d6928710fc1e3c00ae05939a8dc17d1350f6200c88e4462825ede73da9466f0fc4ea36b650a12caf7587cbd0f41647e00fe788ed3247b5a7a52aeb32468037c644adea3fe649f27316f9234d1da8ede1642ef27cd3ff779a96f01b18422ebc6e63224cc4498e4986b4f043de4f47174adf4f206895e590c77426db7edfed7994fdce62d9b233db8e37916ffbb5bfd09a0b4bb6fdfebd5e9eba08ca07fb3c02b2f41e68540a05ef940ddf5c168d9e1119a242c226e567e017a71242edf6b1391b859e0a7fc878e38da805ee4306b67fb7c884d7f2295ec5436214e6591bd034cc0828f926b20025583db1ea1cc6eb43a52c3739b845f8bb14d3d4aeb14e0481a92ed10f1d4e171aea91ce2011a94decff24aedf7e699f8822796922e1671b3e5452866effbe864067c9eb4ba13c4354ed1e8c451ef48ffbbf027d159c6a6d7dc78c1ac702a4255e4fe8f7508c1073b5ee8ececc83e234d7b913ac1a23959b9512fa8048590f5163cdc263c8605906b2c513ea32d4a531289968e55d5e191"
+                >
+                    <div class="bearer-plaque">
+                        <div class="plaque-holo-foil"></div>
+                        <div class="plaque-glare"></div>
+                        <div class="plaque-border-inset"></div>
+
+                        <div class="plaque-content">
+                            <p class="plaque-header">— physical bearer verification —</p>
+                            <h2 class="plaque-title">Certificate of Authenticity</h2>
+
+                            <div class="plaque-grid">
+                                <p class="plaque-line">
+                                    Physical Verso Seal: <strong id="v-print-holo"></strong>
+                                </p>
+                                <p class="plaque-line">
+                                    Certificate Security Seal: <strong id="v-coa-holo"></strong>
+                                </p>
+                                <p class="plaque-line">
+                                    Substrate: <strong id="v-medium"></strong>
+                                </p>
+                            </div>
+
+                            <p id="v-guarantee" class="plaque-guarantee"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <a href="/" class="back-link">return to portfolio</a>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>© MMXXVI Robert Potter. All Rights Reserved.</p>
+            <p>No Artificial Intelligence.</p>
+        </footer>
+
+    </body>
+</html>
